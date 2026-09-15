@@ -10,6 +10,7 @@ position: relative;
 
 }
 
+/* ESTILIZAÇÃO DA LISTA DA BARRA DE MENU SUPERIOR (IMAGEM LOGO NETFLIX E AVATAR) */
 ul {
     height: 25px;
     width: 95%;
@@ -20,6 +21,7 @@ ul {
     padding-top: 10px;
     }
 
+    /* AS DUAS IMAGENS DA BARRA DE MENU SUPERIOR TEM A MSM CLASS "IMG-TOPO", ESTILIZAÇÃO P AS DUAS IMAGENS */
 .img-topo {
     height: 25px;
 }
@@ -29,10 +31,12 @@ video {
     min-height: 80%;
 }
 
+/* TODAS AS IMAGENS DOS FILMES QUE SERÃO EXIBIDAS NO CARROSSEL */
 .img-carrossel {
     height: 120px;
 }
 
+ /* FUNÇÃO QUE DA MOVIMENTO AO CARROSSEL */
 #carouselExampleIndicators {
     background-color: transparent;
     position: absolute;
@@ -41,6 +45,7 @@ video {
     padding-bottom: 50px;
 }
 
+/* TEXTO ACIMA DO CARROSEL */
 .titulo-carrosel {
     color: white;
     font-size: 30px;
@@ -49,6 +54,7 @@ video {
     position: relative;
 }
 
+/* DIV COM AS TAGS DE TEXTO COM AS INFORMAÇÕES DA SERIE/FILME DE CAPA */
 .capa {
     position: absolute;
     bottom: 35%;
@@ -57,7 +63,7 @@ video {
     z-index: 3;
 
 }
-
+/* TAGS DE DE TEXTO E LINK DA CAPA DA PAGINA */
 .capa-titulo {
     color: white;
     font-size: 80px; 
@@ -87,16 +93,20 @@ video {
     cursor: pointer;
 }
 
+
+/* SERVE DE REFERENCIA PARA BOTÕES COMO DO WHATSAPP*/
 .botao-som {
+    position: absolute;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     z-index: 5;
-    position: absolute;
     top: 55px;
     right: 20px;
 }
 
+
+/* DIV COM DETALHES DO FILME/SERIE DA CAPA DA PAGINA, DEPOIS, QUE O USUÁRIO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
 .modal {
     display: none;
     position: fixed ;
@@ -108,6 +118,7 @@ video {
     background-color: rgba( 0, 0, 0, 0.8);
 }
 
+/* EFEITO DA CAIXA DE DIALOGO QUE APARECE, COM OS DETALHES DO FILME/SERIE DA CAPA, LOGO APÓS O USUÁRIO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
 .modal-conteudo {
     background-color: #181818;
     margin: 30px auto;
