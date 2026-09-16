@@ -1,6 +1,10 @@
 /*EFEITO NOS ELEMENTOS DE DESCRIÇÃO(INFORMAÇÕES) - (TAGS: H1, H2, P) - DO FILME/SERIE PRINCIPAL DA CAPA DA PAGINA*/
 @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
 
+
+/* 
+"BODY" TAMBEM CONHECIDO COMO "*" 
+*/
 body {
 background-color: black;
 margin: 0;
@@ -57,7 +61,7 @@ video {
     position: relative;
 }
 
-/* DIV COM AS TAGS DE TEXTO COM AS INFORMAÇÕES DA SERIE/FILME DE CAPA */
+/* DIV COM AS TAGS DE TITULO<h1>, TEXTO<p> E BOTÕES-LINK<a> COM AS INFORMAÇÕES DA SERIE/FILME DE CAPA */
 .capa {
     position: absolute;
     bottom: 35%;
@@ -66,7 +70,7 @@ video {
     z-index: 3;
 
 }
-/* TAGS DE DE TEXTO E LINK DA CAPA DA PAGINA */
+/* TAG DE TITULO DO FILME DE CAPA DA PAGINA */
 .capa-titulo {
     color: white;
     font-size: 80px; 
@@ -74,12 +78,14 @@ video {
     font-weight: bold;
 }
 
+/* TAG DE DESCRIÇÃO DO FILME DE CAPA DA PAGINA */
 .capa-descrição {
     color: white;
     font-size: 25px;
     margin-bottom: 20px;
 }
 
+/* TAG DE BOTÃO "ASSISTIR" DO FILME DE CAPA DA PAGINA, NO QUAL, ESTÁ LINKADO AO SOM "TUNDUM, QUANDO FOR CLICADO" */
 .link-assistir {
     background-color: white;
     color: black;
@@ -88,6 +94,7 @@ video {
     cursor: pointer;
 }
 
+/* TAG DA CAIXA DE INFORMAÇÕES DO FILME DE CAPA DA PAGINA, QUE É ABERTA AO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
 .link-info {
     color: black;
     background-color: grey;
@@ -97,7 +104,7 @@ video {
 }
 
 
-/* SERVE DE REFERENCIA PARA BOTÕES COMO DO WHATSAPP*/
+/* SERVE DE REFERENCIA PARA OUTROS BOTÕES COMO DO WHATSAPP*/
 .botao-som {
     position: absolute;
     border: none;
