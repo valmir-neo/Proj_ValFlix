@@ -49,3 +49,18 @@ tumdum.addEventListener("click", tocatumdum)
 function tocatumdum() {
     audio.play()
 }
+
+
+
+
+
+
+/* FUNÇÃO PARA ATIVAR O SANDUICHE NO JS */
+const btnSanduiche = document.getElementById('btnSanduiche');
+
+const menuLinks = document.getElementById('menuLinks');
+
+btnSanduiche.addEventListener('click', () => {
+     menuLinks.classList.toggle('ativo'); 
+    }); 
+    
