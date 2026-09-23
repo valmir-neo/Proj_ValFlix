@@ -136,3 +136,174 @@ video {
     width: 60%;
     color: white;
 }
+
+
+
+
+/* A PARTIR DAQUI, SUGESTÃO GEMINI: RESPONSIVA NORMAL */
+
+
+/* 1. TELAS PEQUENAS (Smartphones na vertical / iPhones até 576px) */
+@media (max-width: 576px) {
+
+    /* Ajuste da Fonte Global para telas pequenas */
+    body {
+        font-family: Arial, Helvetica, sans-serif; /* Kablammo dificulta a leitura em telas pequenas */
+    }
+
+    /* Cabeçalho / Barra de Navegação */
+    ul {
+        padding: 10px 15px;
+        z-index: 10;
+    }
+
+    .img-topo {
+        height: 20px;
+    }
+
+    /* Vídeo principal de fundo */
+    video {
+        min-height: 250px;
+        object-fit: cover; /* Garante que o vídeo não fique esticado */
+    }
+
+    /* Botão de Som Mute/Unmute */
+    .botao-som {
+        top: 65px;
+        right: 15px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    /* Conteúdo do filme em destaque (Capa) */
+    .capa {
+        position: relative; /* Muda de absolute para relative para não sobrepor tudo */
+        width: 90%;
+        bottom: auto;
+        left: 0;
+        margin: -80px auto 20px auto; /* Sobe um pouco para ficar sobre o vídeo */
+        padding: 15px;
+        background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .capa-titulo {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+
+    .capa-descrição {
+        font-size: 14px;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    /* Botões Assistir e Mais Informações */
+    .link-assistir, 
+    .link-info {
+        display: inline-block;
+        font-size: 14px;
+        padding: 8px 14px;
+        margin: 4px;
+    }
+
+    /* Ajuste do Carrossel de Filmes */
+    #carouselExampleIndicators {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .titulo-carrosel {
+        font-size: 18px;
+        margin-left: 15px;
+        text-align: center;
+    }
+
+    .carousel-item {
+        text-align: center;
+    }
+
+    .img-carrossel {
+        height: 90px;
+        margin: 0 4px;
+        border-radius: 4px;
+    }
+
+    /* Modal / Pop-up de informações */
+    .modal-conteudo {
+        width: 90%;
+        margin: 20% auto;
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+
+/* 2. TELAS MÉDIAS (Tablets / iPads na vertical - de 577px até 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+
+    .capa {
+        bottom: 20%;
+        left: 5%;
+        width: 70%;
+    }
+
+    .capa-titulo {
+        font-size: 48px;
+    }
+
+    .capa-descrição {
+        font-size: 18px;
+    }
+
+    #carouselExampleIndicators {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .titulo-carrosel {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .carousel-item {
+        text-align: center;
+    }
+
+    .img-carrossel {
+        height: 110px;
+    }
+
+    .modal-conteudo {
+        width: 75%;
+    }
+}
+
+
+/* 3. TELAS GRANDES / TABLETS EM MODO PAISAGEM (de 769px até 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .capa {
+        bottom: 25%;
+        width: 60%;
+    }
+
+    .capa-titulo {
+        font-size: 60px;
+    }
+
+    #carouselExampleIndicators {
+        position: absolute;
+        left: 10%;
+        bottom: -10%;
+        width: 80%;
+    }
+}
