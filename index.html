@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head> 
+<head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <!-- LINHA ACIMA É O EFEITO BOOTSTRAP PARA O MENU DA PARTE DE BAIXO QUE LINKA PARA OUTROS FILMES--> 
+    <!-- LINHA ACIMA É O EFEITO BOOTSTRAP PARA O MENU DA PARTE DE BAIXO QUE LINKA PARA OUTROS FILMES-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NetFlix do Val</title>
@@ -15,14 +15,24 @@
 
     <audio src="audio/tudum-netflix-sound.mp3" class="audio"></audio>
 
-    <ul>
-        <li>
-            <img src="img/logo.png" class="img-topo">
-        </li>
-        <li>
-            <img src="img/avatar.png" class="img-topo">
-        </li>
-    </ul>
+    <nav class="navbar-box">
+        <img src="img/logo.png" class="img-topo logo">
+
+        <!-- Ícone do Menu Sanduíche -->
+        <button class="btn-sanduiche" id="btnSanduiche">
+            &#9776; <!-- Código HTML para o ícone de 3 barras -->
+        </button>
+
+        <ul class="menu-links" id="menuLinks">
+            <li><a href="./index.html" target="_blank" rel="noopener noreferrer">Início</a></li>
+            <li><a href="./series.html" target="_blank" rel="noopener noreferrer">Séries</a></li>
+            <li><a href="./filmes.html" target="_blank" rel="noopener noreferrer">Filmes</a></li>
+            <li><a href="./novidades.html" target="_blank" rel="noopener noreferrer">Novidades</a></li>
+            <li><a href="./top3.html" target="_blank" rel="noopener noreferrer">Top 3</a></li>
+
+            <li><img src="img/avatar.png" class="img-topo avatar"></li>
+        </ul>
+    </nav>
 
     <div class="capa">
         <h1 class="capa-titulo">Round 6</h1>
@@ -35,7 +45,8 @@
 
     <button class="botao-som">🔊</button>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> <!--DIV CRIADA PARA O EFEITO CARROSSEL DA BARRA MENU INFERIOR DO SITE PRINCIPAL-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <!--DIV CRIADA PARA O EFEITO CARROSSEL DA BARRA MENU INFERIOR DO SITE PRINCIPAL-->
         <ol class="carousel-indicators"> <!--LISTA ORDENADA PARA OS INDICADORES DO CARROSSEL-->
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -44,7 +55,8 @@
         <h2 class="titulo-carrosel">Principais Filmes e Séries</h2>
 
         <div class="carousel-inner"> <!--DIV PARA O CONTEÚDO DO CARROSSEL, MOSTRANDO 2 FILMES POR VEZ-->
-            <div class="carousel-item active"> <!--NO CASO ESSA SENDO A PRINCIPAL, QUE MOSTRARÁ OS FILMES ASSIM QUE O NAVEGADOR CARREGAR A PÁGINA-->
+            <div class="carousel-item active">
+                <!--NO CASO ESSA SENDO A PRINCIPAL, QUE MOSTRARÁ OS FILMES ASSIM QUE O NAVEGADOR CARREGAR A PÁGINA-->
                 <img src="img/moonfall.jpg" class="img-carrossel">
                 <img src="img/hunter.jpg" class="img-carrossel">
             </div>
@@ -60,17 +72,22 @@
             </div>
 
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <!--BOTÃO DO TIPO "LINK" PARA SELECIONAR OS ITENS ANTERIORES DO CARROSSEL-->
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!--TAG PARA ESTILIZAR O BOTÃO/LINK, NESSE CASO, PARA ESCONDER O NOME -->
-            <span class="sr-only">Anterior</span> <!--TAG PARA ESTILIZAR O BOTÃO/LINK, NESSE CASO, DIZER QUAL A FUNÇÃO DELE -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <!--BOTÃO DO TIPO "LINK" PARA SELECIONAR OS ITENS ANTERIORES DO CARROSSEL-->
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <!--TAG PARA ESTILIZAR O BOTÃO/LINK, NESSE CASO, PARA ESCONDER O NOME -->
+            <span class="sr-only">Anterior</span>
+            <!--TAG PARA ESTILIZAR O BOTÃO/LINK, NESSE CASO, DIZER QUAL A FUNÇÃO DELE -->
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <!--MESMA COISA DO ANTERIOR, MAS COM A FUNÇÃO DE AVANÇAR OS ITENS DO CARROSSEL-->
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <!--MESMA COISA DO ANTERIOR, MAS COM A FUNÇÃO DE AVANÇAR OS ITENS DO CARROSSEL-->
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Próximo</span>
         </a>
     </div>
 
-    <div class="modal"> <!--DIV COM DETALHES DO FILME/SERIE DA CAPA DA PAGINA, DEPOIS, QUE O USUÁRIO CLICAR NO BOTÃO "MAIS INFORMAÇÕES"-->
+    <div class="modal">
+        <!--DIV COM DETALHES DO FILME/SERIE DA CAPA DA PAGINA, DEPOIS, QUE O USUÁRIO CLICAR NO BOTÃO "MAIS INFORMAÇÕES"-->
         <div class="modal-conteudo">
             <h2>Round 6</h2>
             <p>A série Round 6 é uma ficção sul-coreana original da Netflix que conta a história de um grupo de pessoas
@@ -81,7 +98,7 @@
         </div>
     </div>
 
-        <!--LINKS PARA OS EFEITOS DO CARROSEL (SCRIPTS DO BOOTSTRAP)-->
+    <!--LINKS PARA OS EFEITOS DO CARROSEL (SCRIPTS DO BOOTSTRAP)-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
