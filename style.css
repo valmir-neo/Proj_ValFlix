@@ -117,3 +117,61 @@ body {
   	justify-content: flex-end;
   	padding: 0 4% 40px 4%;
 }
+
+
+
+
+/* [CARROSEL] */
+
+/* Fileira de Filmes com Scroll Horizontal Nativo (Igual ao App da Netflix) */
+/* Fileira em Inglês é “row”, por isso será adotado */
+
+/* [CAROUSEL SLIDE > fileira-container ] */
+	.row-container {
+  		padding: 0 0 20px 4%;
+  		margin-top: -30px; /* Sobrepõe levemente o gradiente do hero */
+  		position: relative;
+  		z-index: 5;
+	}
+
+/* [TITULO-CARROSEL > fileira-titulo] */
+	.row-title {
+  		font-size: 1.2rem;
+  		font-weight: 700;
+  		margin-bottom: 10px;
+	}
+
+
+/* Lista horizontal deslizável */
+
+/* Uma <div> para todas as imagens [CAROUSEL-INNER > fileira-cards] */
+	.row-cards {
+  		display: flex;
+  		gap: 8px;
+  		overflow-x: auto;
+  		scroll-behavior: smooth;
+  		padding-bottom: 10px;
+	}
+
+/* Esconde a barra de scroll padrão mantendo a funcionalidade de deslizar */
+	.row-cards::-webkit-scrollbar {
+  		display: none;
+	}
+
+
+
+
+/* Class para todas as imagens do Carrossel [CAROUSEL-ITEM > card-filme] */
+	
+	.movie-card {
+  		min-width: 120px;
+  		height: 170px;
+  		border-radius: 4px;
+  		object-fit: cover;
+  		transition: transform 0.3s ease;
+  		cursor: pointer;
+	}
+
+	.movie-card :hover {
+  		transform: scale(1.08);
+	}

@@ -42,47 +42,38 @@
     <button class="botao-som">🔊</button>
 
 
+<!--ANTES CARROSSEL, E AGORA UMA FILEIRA DE FILMES, QUE ROLA AUTOMATICAMENTE-->
 
+    <div class="row-container">
+       
+        <h2 class="row-title">Principais Filmes e Séries</h2>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <!--DIV CRIADA PARA O EFEITO CARROSSEL DA BARRA MENU INFERIOR DO SITE PRINCIPAL-->
-        <ol class="carousel-indicators"> <!--LISTA ORDENADA PARA OS INDICADORES DO CARROSSEL-->
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <h2 class="titulo-carrosel">Principais Filmes e Séries</h2>
-
-        <div class="carousel-inner"> <!--DIV PARA O CONTEÚDO DO CARROSSEL, MOSTRANDO 2 FILMES POR VEZ-->
-            <div class="carousel-item active">
-                <!--NO CASO ESSA SENDO A PRINCIPAL, QUE MOSTRARÁ OS FILMES ASSIM QUE O NAVEGADOR CARREGAR A PÁGINA-->
-                <img src="img/moonfall.jpg" class="img-carrossel">
-                <img src="img/hunter.jpg" class="img-carrossel">
-            </div>
-
-            <div class="carousel-item">
-                <img src="img/f1.jpg" class="img-carrossel">
-                <img src="img/chokehold.jpg" class="img-carrossel">
-            </div>
-
-            <div class="carousel-item">
-                <img src="img/abyss.jpg" class="img-carrossel">
-                <img src="img/jaula.jpg" class="img-carrossel">
+        <div class="row-cards"> 
+            <div class="movie-card">
+                <img src="img/moonfall.jpg">
+                <img src="img/hunter.jpg">
+                <img src="img/f1.jpg">
+                <img src="img/chokehold.jpg">
+                <img src="img/abyss.jpg">
+                <img src="img/jaula.jpg">
             </div>
 
         </div>
+
+    <!--   
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <!--BOTÃO DO TIPO "LINK" PARA SELECIONAR OS ITENS ANTERIORES DO CARROSSEL-->
+            BOTÃO DO TIPO "LINK" PARA SELECIONAR OS ITENS ANTERIORES DO CARROSSEL
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <!--TAG PARA ESTILIZAR O BOTÃO/LINK, NESSE CASO, PARA ESCONDER O NOME -->
+            TAG PARA ESTILIZAR O BOTÃO/LINK, NESSE CASO, PARA ESCONDER O NOME 
             <span class="sr-only">Anterior</span>
-            <!--TAG PARA ESTILIZAR O BOTÃO/LINK, NESSE CASO, DIZER QUAL A FUNÇÃO DELE -->
+           TAG PARA ESTILIZAR O BOTÃO/LINK, NESSE CASO, DIZER QUAL A FUNÇÃO DELE
         </a>
         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <!--MESMA COISA DO ANTERIOR, MAS COM A FUNÇÃO DE AVANÇAR OS ITENS DO CARROSSEL-->
+            MESMA COISA DO ANTERIOR, MAS COM A FUNÇÃO DE AVANÇAR OS ITENS DO CARROSSEL
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Próximo</span>
         </a>
+    -->
     </div>
 
 
@@ -98,16 +89,7 @@
         </div>
     </div>
 
-    <!--LINKS PARA OS EFEITOS DO CARROSEL (SCRIPTS DO BOOTSTRAP)-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+   
 
     <script src="scripts.js">
 
