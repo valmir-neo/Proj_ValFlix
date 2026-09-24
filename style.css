@@ -1,138 +1,119 @@
 /*EFEITO NOS ELEMENTOS DE DESCRIÇÃO(INFORMAÇÕES) - (TAGS: H1, H2, P) - DO FILME/SERIE PRINCIPAL DA CAPA DA PAGINA*/
 @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
 
-
-/* 
-"BODY" TAMBEM CONHECIDO COMO "*" 
-*/
+/* Reset simples para consistência */
 body {
-background-color: black;
-margin: 0;
-padding: 0;
-font-family: "Kablammo", system-ui;
-position: relative;
-
+    background-color: #141414;
+    /* Preto oficial Netflix */
+    color: #fff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
 }
 
-/* ESTILIZAÇÃO DA LISTA DA BARRA DE MENU SUPERIOR (IMAGEM LOGO NETFLIX E AVATAR) */
-ul {
-    height: 25px;
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+/* Header Transparente com Degradê */
+.navbar-netflix {
     position: fixed;
-    padding-top: 10px;
-    }
-
-    /* AS DUAS IMAGENS DA BARRA DE MENU SUPERIOR TEM A MSM CLASS "IMG-TOPO", ESTILIZAÇÃO P AS DUAS IMAGENS */
-.img-topo {
-    height: 25px;
-}
-
-
-
-
-video {
-    width: 100%;
-    min-height: 80%;
-}
-
-/* TODAS AS IMAGENS DOS FILMES QUE SERÃO EXIBIDAS NO CARROSSEL */
-.img-carrossel {
-    height: 120px;
-}
-
- /* FUNÇÃO QUE DA MOVIMENTO AO CARROSSEL */
-#carouselExampleIndicators {
-    background-color: transparent;
-    position: absolute;
-    bottom: -25%;
-    left: 33%;
-    padding-bottom: 50px;
-}
-
-/* TEXTO ACIMA DO CARROSEL */
-.titulo-carrosel {
-    color: white;
-    font-size: 30px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    position: relative;
-}
-
-/* DIV COM AS TAGS DE TITULO<h1>, TEXTO<p> E BOTÕES-LINK<a> COM AS INFORMAÇÕES DA SERIE/FILME DE CAPA */
-.capa {
-    position: absolute;
-    bottom: 35%;
-    left: 5%;
-    width: 50%;
-    z-index: 3;
-
-}
-/* TAG DE TITULO DO FILME DE CAPA DA PAGINA */
-.capa-titulo {
-    color: white;
-    font-size: 80px; 
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-/* TAG DE DESCRIÇÃO DO FILME DE CAPA DA PAGINA */
-.capa-descrição {
-    color: white;
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
-/* TAG DE BOTÃO "ASSISTIR" DO FILME DE CAPA DA PAGINA, NO QUAL, ESTÁ LINKADO AO SOM "TUNDUM, QUANDO FOR CLICADO" */
-.link-assistir {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* TAG DA CAIXA DE INFORMAÇÕES DO FILME DE CAPA DA PAGINA, QUE É ABERTA AO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
-.link-info {
-    color: black;
-    background-color: grey;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-
-/* SERVE DE REFERENCIA PARA OUTROS BOTÕES COMO DO WHATSAPP*/
-.botao-som {
-    position: absolute;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 5;
-    top: 55px;
-    right: 20px;
-}
-
-
-/* DIV COM DETALHES DO FILME/SERIE DA CAPA DA PAGINA, DEPOIS, QUE O USUÁRIO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
-.modal {
-    display: none;
-    position: fixed ;
-    z-index: 5;
-    left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba( 0, 0, 0, 0.8);
+    height: 70px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    z-index: 10;
 }
 
-/* EFEITO DA CAIXA DE DIALOGO QUE APARECE, COM OS DETALHES DO FILME/SERIE DA CAPA, LOGO APÓS O USUÁRIO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
-.modal-conteudo {
-    background-color: #181818;
-    margin: 30px auto;
-    padding: 20px;
-    width: 60%;
-    color: white;
+
+
+
+/* Área Principal (Hero/Destaque com Vídeo) */
+
+/*  [MAIN-BOX OU CAPA]  */
+.hero-container {
+    position: relative;
+    height: 80vh;
+    /* Ocupa 80% da altura da tela */
+    width: 100%;
+}
+
+/*  [CAPA-TITULO <h1>]  */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/*  [CAPA-DESCRIÇÃO <p>]  */
+.hero-description {
+    font-size: 1rem;
+    max-width: 500px;
+    margin-bottom: 20px;
+    color: #e5e5e5;
+}
+
+
+
+/* [NOVA <div> PARA OS BOTÕES/LINK] */
+.btn-container {
+    display: flex;
+    gap: 12px;
+}
+
+/* [CUSTOMIZAC_BOTOES/LINK] - UMA <div> DENTRO DA OUTRA */
+.btn-netflix {
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* [LINK-ASSISTIR <a>] */
+.btn-play {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.btn-play:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* [LINK-INFO <a>] */
+.btn-info {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: #fff;
+}
+
+.btn-info:hover {
+    background-color: rgba(109, 109, 110, 0.4);
+}
+
+
+
+/* [VIDEO]  */
+.hero-video {
+  	width: 100%;
+  	height: 100%;
+  	object-fit: cover;
+}
+
+/* Degradê escuro sobre o vídeo para dar leitura ao texto */
+  /* Obs.: Criar uma <div> para o efeito do video, com “class = hero-overlay” */
+
+/* [EFEITO VIDEO]  */
+.hero-overlay {
+  	position: absolute;
+  	inset: 0;
+ 	background: linear-gradient(0deg, #141414 10%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 100%);
+ 	display: flex;
+  	flex-direction: column;
+  	justify-content: flex-end;
+  	padding: 0 4% 40px 4%;
 }
