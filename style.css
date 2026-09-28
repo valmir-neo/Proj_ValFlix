@@ -1,0 +1,214 @@
+/*EFEITO NOS ELEMENTOS DE DESCRIÇÃO(INFORMAÇÕES) - (TAGS: H1, H2, P) - DO FILME/SERIE PRINCIPAL DA CAPA DA PAGINA*/
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+
+/* Reset simples para consistência */
+body {
+    background-color: #141414;
+    /* Preto oficial Netflix */
+    color: #fff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Header Transparente com Degradê */
+.navbar-netflix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    z-index: 10;
+}
+
+
+
+
+/* Área Principal (Hero/Destaque com Vídeo) */
+
+/*  [MAIN-BOX OU CAPA]  */
+.hero-container {
+    position: relative;
+    height: 80vh;
+    /* Ocupa 80% da altura da tela */
+    width: 100%;
+}
+
+/*  [CAPA-TITULO <h1>]  */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/*  [CAPA-DESCRIÇÃO <p>]  */
+.hero-description {
+    font-size: 1rem;
+    max-width: 500px;
+    margin-bottom: 20px;
+    color: #e5e5e5;
+}
+
+
+
+/* [NOVA <div> PARA OS BOTÕES/LINK] */
+.btn-container {
+    display: flex;
+    gap: 12px;
+}
+
+/* [CUSTOMIZAC_BOTOES/LINK] - UMA <div> DENTRO DA OUTRA */
+.btn-netflix {
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* [LINK-ASSISTIR <a>] */
+.btn-play {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.btn-play:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* [LINK-INFO <a>] */
+.btn-info {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: #fff;
+}
+
+.btn-info:hover {
+    background-color: rgba(109, 109, 110, 0.4);
+}
+
+
+
+/* [VIDEO]  */
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Degradê escuro sobre o vídeo para dar leitura ao texto */
+/* Obs.: Criar uma <div> para o efeito do video, com “class = hero-overlay” */
+
+/* [EFEITO VIDEO]  */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #141414 10%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.7) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 4% 40px 4%;
+}
+
+
+
+
+/* [CARROSEL] */
+
+/* Fileira de Filmes com Scroll Horizontal Nativo (Igual ao App da Netflix) */
+/* Fileira em Inglês é “row”, por isso será adotado */
+
+/* [CAROUSEL SLIDE > fileira-container ] */
+.row-container {
+    padding: 0 0 20px 4%;
+    margin-top: -30px;
+    /* Sobrepõe levemente o gradiente do hero */
+    position: relative;
+    z-index: 5;
+}
+
+/* [TITULO-CARROSEL > fileira-titulo] */
+.row-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+/* Lista horizontal deslizável */
+
+/* Uma <div> para todas as imagens [CAROUSEL-INNER > fileira-cards] */
+.row-cards {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+/* Esconde a barra de scroll padrão mantendo a funcionalidade de deslizar */
+.row-cards::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+/* Class para todas as imagens do Carrossel [CAROUSEL-ITEM > card-filme] */
+
+.movie-card {
+    min-width: 120px;
+    height: 170px;
+    border-radius: 4px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card :hover {
+    transform: scale(1.08);
+}
+
+
+
+/* [RESPONSIVO] */
+
+/* Ajustes Responsivos para Telas de Smartphones */
+
+
+@media (max-width: 600px) {
+    .hero-container {
+        height: 65vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2; /* 👈 Adicione esta linha para limpar o aviso do VS Code */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .btn-netflix {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+
+    .movie-card {
+        min-width: 100px;
+        height: 140px;
+    }
+}
