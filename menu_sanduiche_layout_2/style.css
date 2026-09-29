@@ -1,87 +1,17 @@
     /*EFEITO NOS ELEMENTOS DE DESCRIÇÃO(INFORMAÇÕES) - (TAGS: H1, H2, P) - DO FILME/SERIE PRINCIPAL DA CAPA DA PAGINA*/
-@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
 
 
-/* 
+    /* 
 "BODY" TAMBEM CONHECIDO COMO "*" 
 */
-body {
-background-color: black;
-margin: 0;
-padding: 0;
-font-family: "Kablammo", system-ui;
-position: relative;
+    body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        font-family: "Kablammo", system-ui;
+        position: relative;
 
-}
-
-
-
-
-
-
-/* Estilos Globais da Nav */
-.navbar-box {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  z-index: 100;
-}
-
-.img-topo logo { 
-    height: 30px; 
-}
-
-.Img-topo avatar { 
-    height: 30px; 
-    border-radius: 4px; 
-}
-
-.btn-sanduiche {
-  display: none; /* Escondido no Desktop */
-  background: none;
-  border: none;
-  color: white;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-.menu-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-links a {
-  color: #e5e5e5;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
-
-
-
-
-
-
-/* ESTILIZAÇÃO DA LISTA DA BARRA DE MENU SUPERIOR (IMAGEM LOGO NETFLIX E AVATAR) */
-ul {
-    height: 25px;
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    position: fixed;
-    padding-top: 10px;
     }
 
 
@@ -89,144 +19,284 @@ ul {
 
 
 
-video {
-    width: 100%;
-    min-height: 80%;
-}
+    /* Estilos Globais da Nav */
+    .navbar-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        z-index: 100;
+    }
 
-/* TODAS AS IMAGENS DOS FILMES QUE SERÃO EXIBIDAS NO CARROSSEL */
-.img-carrossel {
-    height: 120px;
-}
+    .img-topo logo {
+        height: 30px;
+    }
 
- /* FUNÇÃO QUE DA MOVIMENTO AO CARROSSEL */
-#carouselExampleIndicators {
-    background-color: transparent;
-    position: absolute;
-    bottom: -25%;
-    left: 33%;
-    padding-bottom: 50px;
-}
+    .Img-topo avatar {
+        height: 30px;
+        border-radius: 4px;
+    }
 
-/* TEXTO ACIMA DO CARROSEL */
-.titulo-carrosel {
-    color: white;
-    font-size: 30px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    position: relative;
-}
+    .btn-sanduiche {
+        display: none;
+        /* Escondido no Desktop */
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
 
-/* DIV COM AS TAGS DE TITULO<h1>, TEXTO<p> E BOTÕES-LINK<a> COM AS INFORMAÇÕES DA SERIE/FILME DE CAPA */
-.capa {
-    position: absolute;
-    bottom: 35%;
-    left: 5%;
-    width: 50%;
-    z-index: 3;
+    .menu-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-}
-/* TAG DE TITULO DO FILME DE CAPA DA PAGINA */
-.capa-titulo {
-    color: white;
-    font-size: 80px; 
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-/* TAG DE DESCRIÇÃO DO FILME DE CAPA DA PAGINA */
-.capa-descrição {
-    color: white;
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
-/* TAG DE BOTÃO "ASSISTIR" DO FILME DE CAPA DA PAGINA, NO QUAL, ESTÁ LINKADO AO SOM "TUNDUM, QUANDO FOR CLICADO" */
-.link-assistir {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* TAG DA CAIXA DE INFORMAÇÕES DO FILME DE CAPA DA PAGINA, QUE É ABERTA AO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
-.link-info {
-    color: black;
-    background-color: grey;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-
-/* SERVE DE REFERENCIA PARA OUTROS BOTÕES COMO DO WHATSAPP*/
-.botao-som {
-    position: absolute;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 5;
-    top: 55px;
-    right: 20px;
-}
-
-
-/* DIV COM DETALHES DO FILME/SERIE DA CAPA DA PAGINA, DEPOIS, QUE O USUÁRIO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
-.modal {
-    display: none;
-    position: fixed ;
-    z-index: 5;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba( 0, 0, 0, 0.8);
-}
-
-/* EFEITO DA CAIXA DE DIALOGO QUE APARECE, COM OS DETALHES DO FILME/SERIE DA CAPA, LOGO APÓS O USUÁRIO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
-.modal-conteudo {
-    background-color: #181818;
-    margin: 30px auto;
-    padding: 20px;
-    width: 60%;
-    color: white;
-}
+    .menu-links a {
+        color: #e5e5e5;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
 
 
 
 
 
 
+    /* ESTILIZAÇÃO DA LISTA DA BARRA DE MENU SUPERIOR (IMAGEM LOGO NETFLIX E AVATAR) */
+    ul {
+        height: 25px;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        position: fixed;
+        padding-top: 10px;
+    }
 
 
 
-/* --- REGRAS PARA SMARTPHONES (Até 768px) --- */
-@media (max-width: 768px) {
 
-  .btn-sanduiche {
-    display: block; /* Exibe o botão sanduíche no celular */
-  }
 
-  .menu-links {
-    display: none; /* Esconde a lista por padrão */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    background-color: #141414;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.8);
-  }
 
-  /* Classe ativada via JS para abrir o menu */
-  .menu-links.ativo {
-    display: flex;
-  }
+    video {
+        width: 100%;
+        min-height: 80%;
+    }
 
-  .menu-links li {
-    margin: 10px 0;
-  }
-}
+    /* TODAS AS IMAGENS DOS FILMES QUE SERÃO EXIBIDAS NO CARROSSEL */
+    .img-carrossel {
+        height: 120px;
+    }
+
+    /* FUNÇÃO QUE DA MOVIMENTO AO CARROSSEL */
+    #carouselExampleIndicators {
+        background-color: transparent;
+        position: absolute;
+        bottom: -25%;
+        left: 33%;
+        padding-bottom: 50px;
+    }
+
+    /* TEXTO ACIMA DO CARROSEL */
+    .titulo-carrosel {
+        color: white;
+        font-size: 30px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        position: relative;
+    }
+
+    /* DIV COM AS TAGS DE TITULO<h1>, TEXTO<p> E BOTÕES-LINK<a> COM AS INFORMAÇÕES DA SERIE/FILME DE CAPA */
+    .capa {
+        position: absolute;
+        bottom: 35%;
+        left: 5%;
+        width: 50%;
+        z-index: 3;
+
+    }
+
+    /* TAG DE TITULO DO FILME DE CAPA DA PAGINA */
+    .capa-titulo {
+        color: white;
+        font-size: 80px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    /* TAG DE DESCRIÇÃO DO FILME DE CAPA DA PAGINA */
+    .capa-descrição {
+        color: white;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    /* TAG DE BOTÃO "ASSISTIR" DO FILME DE CAPA DA PAGINA, NO QUAL, ESTÁ LINKADO AO SOM "TUNDUM, QUANDO FOR CLICADO" */
+    .link-assistir {
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    /* TAG DA CAIXA DE INFORMAÇÕES DO FILME DE CAPA DA PAGINA, QUE É ABERTA AO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
+    .link-info {
+        color: black;
+        background-color: grey;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+
+    /* SERVE DE REFERENCIA PARA OUTROS BOTÕES COMO DO WHATSAPP*/
+    .botao-som {
+        position: absolute;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 5;
+        top: 55px;
+        right: 20px;
+    }
+
+
+    /* DIV COM DETALHES DO FILME/SERIE DA CAPA DA PAGINA, DEPOIS, QUE O USUÁRIO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* EFEITO DA CAIXA DE DIALOGO QUE APARECE, COM OS DETALHES DO FILME/SERIE DA CAPA, LOGO APÓS O USUÁRIO CLICAR NO BOTÃO "MAIS INFORMAÇÕES" */
+    .modal-conteudo {
+        background-color: #181818;
+        margin: 30px auto;
+        padding: 20px;
+        width: 60%;
+        color: white;
+    }
+
+
+
+
+
+
+
+
+
+    /* --- REGRAS PARA SMARTPHONES (Até 768px) --- */
+    @media (max-width: 768px) {
+
+        .btn-sanduiche {
+            display: block;
+            /* Exibe o botão sanduíche no celular */
+        }
+
+        .menu-links {
+            display: none;
+            /* Esconde a lista por padrão */
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 100%;
+            background-color: #141414;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Classe ativada via JS para abrir o menu */
+        .menu-links.ativo {
+            display: flex;
+        }
+
+        .menu-links li {
+            margin: 10px 0;
+        }
+    }
+
+
+
+
+    /* Botão Discreto de Voltar */
+    .btn-back-home {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9999;
+        /* Garante que fique acima de todos os elementos da página */
+
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 8px 16px;
+        border-radius: 20px;
+        /* Formato pílula elegante */
+
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 0.85rem;
+        font-weight: 500;
+        text-decoration: none;
+
+        /* Visual sutil com transparência (efeito Glassmorphism) */
+        color: #ffffff;
+        background-color: rgba(20, 20, 20, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(8px);
+        /* Efeito de vidro fosco */
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+    }
+
+    /* Ícone do botão */
+    .btn-back-home svg {
+        transition: transform 0.3s ease;
+    }
+
+    /* Efeito ao passar o mouse (Hover) */
+    .btn-back-home:hover {
+        background-color: rgba(255, 255, 255, 0.95);
+        color: #141414;
+        /* Inverte a cor para dar destaque */
+        border-color: #ffffff;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        transform: translateY(-2px);
+        /* Eleva levemente */
+    }
+
+    .btn-back-home:hover svg {
+        transform: translateX(-3px);
+        /* A setinha dá um leve salto para a esquerda */
+    }
+
+    /* Ajuste para telas pequenas (Celulares) */
+    @media (max-width: 768px) {
+        .btn-back-home {
+            top: 12px;
+            left: 12px;
+            padding: 6px 12px;
+            font-size: 0.75rem;
+        }
+    }
