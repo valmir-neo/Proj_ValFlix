@@ -1,0 +1,122 @@
+/* Reset básico e tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #141414; /* Fundo escuro estilo Netflix */
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container Principal */
+.netflix-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+
+/* CRIADO POR MIM */
+.header h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.header p {
+  color: #808080;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+/* Grid de Cards */
+.cards-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Para funcionar bem no celular */
+}
+
+/* Estilo Individual dos Cards */
+.card {
+  text-decoration: none;
+  color: #808080;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #2f2f2f;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha a área sem distorcer */
+  transition: transform 0.3s ease;
+}
+
+.card-title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Efeitos de HOVER (Passar o mouse por cima) - Estilo Netflix */
+.card:hover {
+  transform: scale(1.08); /* Zoom no card inteiro */
+  color: #ffffff; /* O texto fica branco brilhante */
+}
+
+.card:hover .card-image-wrapper {
+  border-color: #ffffff; /* Borda branca ao redor da imagem */
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2); /* Brilho suave em volta */
+}
+
+.card:hover .card-image-wrapper img {
+  transform: scale(1.05); /* Zoom leve adicional na imagem interna */
+}
+
+/* Ajuste para telas menores (Celulares) */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+ 
+  .cards-grid {
+    gap: 1.5rem;
+  }
+ 
+  .card {
+    width: 200px;
+  }
+ 
+  .card-image-wrapper {
+    height: 130px;
+  }
+}
